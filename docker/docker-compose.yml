@@ -1,0 +1,11 @@
+version: '3'
+services:
+  MessageServer:
+    image: "message-server:latest"
+    container_name: MessageServer
+    volumes:
+      - ../conf:/myApp/conf
+      - ../log:/myApp/log
+    ports:
+      - "8000:8080"
+    restart: always
